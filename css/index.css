@@ -343,6 +343,7 @@ header {
     padding: 2rem 2rem;
     text-align: center;
 }
+
 .service-box h2 {
     margin-top: 3.9rem;
 }
@@ -357,6 +358,7 @@ header {
     top: 0;
     transform: translateY(-50%);
     box-shadow: -0.3rem 0.3rem 2rem 0 #888888;
+    transition: 0.2s ease-out;
 }
 
 .service-circle img {
@@ -388,21 +390,71 @@ header {
 }
 
 .project-box {
+    position: relative;
     height: 40rem;
     width: 30rem;
     border-radius: 0.8rem;
     overflow: hidden;
-    background-color: white;
-
 }
-
+.img-content{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 1.5rem;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease-out,opacity 0.3s ease-out;
+  
+}
+.desc{
+    color:var(--main-color);
+    margin-top: 0.7rem;
+    font-weight: 600;
+}
+.img-content::before{
+    content: "";
+    z-index: 9;
+    position: absolute;
+    background-color: black;
+    opacity: .6;
+    height: 100%;
+    width: 100%;
+}
+.img-content a{
+    z-index: 99;  
+    color: white;
+    text-decoration: none;
+}
+.img-content p {
+    text-align: center;
+    font-size: 1.8rem;
+    word-break: break-word;
+    letter-spacing: 0.1rem;
+}
+.img-content p:nth-of-type(1) {
+    font-weight: 500;
+}
+.img-head{
+    font-weight: 700;
+    font-size: 2.7rem;
+    letter-spacing: 0.3rem;
+}
+.project-box:hover .img-content{
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
 .project-box img {
     height: 100%;
     width: 100%;
 }
-
 .four img {
-    width: 200%;
+    width: 200% !important;
 }
 
 .project-body {
@@ -897,10 +949,11 @@ header {
         background: url(../img/portfolio3.png) 0px 40%/cover no-repeat;
     }
 
- 
+
     #navbar {
         padding: 3rem 7.7rem;
     }
+
     /* 
        #menu{
         display: block;
@@ -960,15 +1013,18 @@ header {
     .project-body div:nth-of-type(7) {
         justify-self: center;
     }
+
     .project-box {
         width: 21.5rem;
     }
+
     .project-body div:nth-of-type(5),
     .project-body div:nth-of-type(6),
     .project-body div:nth-of-type(7),
     .project-body div:nth-of-type(8) {
         width: calc(21.5 * 2.2rem) !important;
     }
+
     .wrapper {
         grid-template-areas:
             'img img img about about'
@@ -978,6 +1034,7 @@ header {
             'img img img gap gap'
             'img img img gap gap';
     }
+
     .paragraph {
         word-break: normal;
     }
@@ -987,48 +1044,58 @@ header {
     html {
         font-size: 8.6px;
     }
+
     .paragraph {
         word-break: normal;
     }
+
     .main-container {
         padding: 0 6rem;
     }
+
     #navbar {
         background-color: black;
         color: white;
         padding: 2.4rem 7.7rem;
     }
-    .links{
+
+    .links {
         line-height: 3.7rem;
         letter-spacing: 0.15rem;
     }
-    #navbar h1 a{
+
+    #navbar h1 a {
         color: white;
-        
+
     }
-    .container{
+
+    .container {
         transition: 0.3s ease-out;
         position: relative;
     }
+
     .container::after {
         width: 100%;
         background: url(../img/phone_portfolio.png) 0px 100%/cover no-repeat;
     }
+
     .project-body {
-      display: flex;
-      flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
     }
 
 
     .project-box {
         width: 23rem;
     }
+
     .project-body div:nth-of-type(1),
     .project-body div:nth-of-type(2),
     .project-body div:nth-of-type(3),
-    .project-body div:nth-of-type(4){
+    .project-body div:nth-of-type(4) {
         margin-left: 5rem;
     }
+
     .project-body div:nth-of-type(5),
     .project-body div:nth-of-type(6),
     .project-body div:nth-of-type(7),
@@ -1036,6 +1103,7 @@ header {
         width: calc(24 * 2rem) !important;
         margin: 0 auto;
     }
+
     .wrapper {
         grid-template-areas:
             'img img img about'
@@ -1043,14 +1111,14 @@ header {
             'img img img hobbies'
             'img img img hobbies'
             'img img img gap ';
-            
+
     }
-     
-    #menu{
+
+    #menu {
         display: block;
     }
-    
-    #navbar p{
+
+    #navbar p {
         position: absolute;
         right: 95px;
         top: 50%;
@@ -1059,11 +1127,13 @@ header {
         font-size: 1.8rem;
         font-weight: 600;
     }
+
     #navbar #link {
         right: 0px;
         position: absolute;
         top: 100%;
     }
+
     #navbar ul {
         max-height: 0;
         overflow: hidden;
@@ -1074,81 +1144,100 @@ header {
         background-color: black;
         transition: 0.3s ease-out;
     }
+
     #navbar ul li {
         line-height: 30px;
-        
+
     }
+
     #navbar ul li a {
         color: white;
     }
+
     .About-me {
         padding: 5rem 0 3rem 7rem;
     }
+
     .hobbies {
         padding: 0rem 0 2rem 5rem;
         grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     }
+
     .img {
         height: 100%;
     }
+
     .contact-details {
         padding: 1rem 0 0 5rem;
     }
+
     .buttons {
         margin-top: 2rem;
     }
+
     .footer-wrapper {
         padding: 0 12rem;
     }
-    
+
 }
+
 @media only screen and (min-width:600px) and (max-width:700px) {
-    html{
+    html {
         font-size: 8.1px;
     }
+
     .paragraph {
         word-break: normal;
     }
+
     .main-container {
         padding: 0 4.7rem;
     }
+
     #navbar {
         background-color: black;
         color: white;
         padding: 2.4rem 7.7rem;
     }
-    .links{
+
+    .links {
         line-height: 3.7rem;
         letter-spacing: 0.15rem;
     }
-    #navbar h1 a{
+
+    #navbar h1 a {
         color: white;
-        
+
     }
-    .container{
+
+    .container {
         transition: 0.3s ease-out;
         position: relative;
     }
+
     .container::after {
         width: 100%;
         background: url(../img/phone_portfolio.png) -50px 100%/cover no-repeat;
     }
+
     .project-body {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
 
     .project-box {
         width: 23rem;
     }
+
     .project-body div:nth-of-type(1),
     .project-body div:nth-of-type(2),
     .project-body div:nth-of-type(3),
-    .project-body div:nth-of-type(4){
+    .project-body div:nth-of-type(4) {
         margin-left: 2rem;
     }
+
     .project-body div:nth-of-type(5),
     .project-body div:nth-of-type(6),
     .project-body div:nth-of-type(7),
@@ -1156,6 +1245,7 @@ header {
         width: calc(24 * 2rem) !important;
         margin: 0 auto;
     }
+
     .wrapper {
         grid-template-areas:
             'img img img about'
@@ -1163,14 +1253,14 @@ header {
             'img img img hobbies'
             'img img img hobbies'
             'img img img gap ';
-            
+
     }
-     
-    #menu{
+
+    #menu {
         display: block;
     }
-    
-    #navbar p{
+
+    #navbar p {
         position: absolute;
         right: 95px;
         top: 50%;
@@ -1179,11 +1269,13 @@ header {
         font-size: 1.8rem;
         font-weight: 600;
     }
+
     #navbar #link {
         right: 0px;
         position: absolute;
         top: 100%;
     }
+
     #navbar ul {
         max-height: 0;
         overflow: hidden;
@@ -1194,82 +1286,101 @@ header {
         background-color: black;
         transition: 0.3s ease-out;
     }
+
     #navbar ul li {
         line-height: 30px;
-        
+
     }
+
     #navbar ul li a {
         color: white;
     }
+
     .About-me {
         padding: 5rem 0 3rem 3rem;
     }
+
     .hobbies {
         padding: 0rem 0 2rem 3rem;
         grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     }
+
     .img {
         height: 100%;
     }
+
     .contact-details {
         padding: 1rem 0 0 5rem;
     }
+
     .buttons {
         margin-top: 2rem;
     }
+
     .footer-wrapper {
         padding: 0 12rem;
     }
-    
+
 }
+
 @media only screen and (min-width:500px) and (max-width:600px) {
-    html{
+    html {
         font-size: 8.1px;
     }
+
     .paragraph {
         word-break: normal;
     }
+
     .main-container {
         padding: 0 3.2rem;
     }
+
     #navbar {
         background-color: black;
         color: white;
         padding: 2.4rem 5rem;
     }
-    .links{
+
+    .links {
         line-height: 3.7rem;
         letter-spacing: 0.15rem;
     }
-    #navbar h1 a{
+
+    #navbar h1 a {
         color: white;
-        
+
     }
-    .container{
+
+    .container {
         transition: 0.3s ease-out;
         position: relative;
     }
+
     .container::after {
         width: 100%;
         background: url(../img/phone_portfolio.png) 50% 100%/cover no-repeat;
         opacity: 0.9;
     }
+
     .project-body {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
 
     .project-box {
         width: 23rem;
     }
+
     .project-body div:nth-of-type(1),
     .project-body div:nth-of-type(2),
     .project-body div:nth-of-type(3),
-    .project-body div:nth-of-type(4){
+    .project-body div:nth-of-type(4) {
         margin-left: 2rem;
     }
+
     .project-body div:nth-of-type(5),
     .project-body div:nth-of-type(6),
     .project-body div:nth-of-type(7),
@@ -1277,20 +1388,21 @@ header {
         width: calc(24 * 2rem) !important;
         margin: 0 auto;
     }
+
     .wrapper {
         grid-template-areas:
             'img img img about'
             'img img img about'
             '. . . .'
             'hobbies hobbies hobbies hobbies';
-            
+
     }
-     
-    #menu{
+
+    #menu {
         display: block;
     }
-    
-    #navbar p{
+
+    #navbar p {
         position: absolute;
         right: 50px;
         top: 50%;
@@ -1299,11 +1411,13 @@ header {
         font-size: 1.8rem;
         font-weight: 600;
     }
+
     #navbar #link {
         right: 0px;
         position: absolute;
         top: 100%;
     }
+
     #navbar ul {
         max-height: 0;
         overflow: hidden;
@@ -1314,94 +1428,117 @@ header {
         background-color: black;
         transition: 0.3s ease-out;
     }
+
     #navbar ul li {
         line-height: 30px;
-        
+
     }
+
     #navbar ul li a {
         color: white;
     }
+
     .About-me {
         padding: 3rem 0 3rem 3rem;
     }
+
     .hobbies {
         padding: 2rem 0 2rem 0;
         grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     }
+
     .img {
         height: 100%;
     }
+
     .contact-details {
         padding: 1rem 0 0 5rem;
     }
+
     .buttons {
         margin-top: 2rem;
     }
+
     .footer-wrapper {
         padding: 0 12rem;
     }
-    .contact-wrapper{
+
+    .contact-wrapper {
         flex-wrap: wrap;
     }
-    .contactme-wrapper{
+
+    .contactme-wrapper {
         flex-basis: 100%;
     }
-    .contact-details{
+
+    .contact-details {
         padding: 2rem 0 0 2rem;
         flex-basis: 90%;
     }
+
     .box {
         margin-bottom: 10rem;
     }
 }
+
 @media only screen and (min-width:300px) and (max-width:500px) {
-    html{
+    html {
         font-size: 7px;
     }
+
     .paragraph {
         word-break: normal;
     }
+
     .main-container {
         padding: 0 3.2rem;
     }
+
     #navbar {
         background-color: black;
         color: white;
         padding: 2.4rem 5rem;
     }
-    .links{
+
+    .links {
         line-height: 3.7rem;
         letter-spacing: 0.15rem;
     }
-    #navbar h1 a{
+
+    #navbar h1 a {
         color: white;
-        
+
     }
-    .container{
+
+    .container {
         transition: 0.3s ease-out;
         position: relative;
     }
+
     .container::after {
         width: 100%;
         background: url(../img/phone_portfolio.png) 50% 100%/cover no-repeat;
         opacity: 0.9;
     }
+
     .project-body {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
 
     .project-box {
         width: 23rem;
     }
+
     .project-body div:nth-of-type(1),
     .project-body div:nth-of-type(2),
     .project-body div:nth-of-type(3),
-    .project-body div:nth-of-type(4){
+    .project-body div:nth-of-type(4) {
         margin-left: 2rem;
     }
+
     .project-body div:nth-of-type(5),
     .project-body div:nth-of-type(6),
     .project-body div:nth-of-type(7),
@@ -1409,19 +1546,20 @@ header {
         width: calc(24 * 2rem) !important;
         margin: 0 auto;
     }
+
     .wrapper {
         grid-template-areas:
             'img img img about'
             'img img img about'
             'hobbies hobbies hobbies hobbies';
-            
+
     }
-     
-    #menu{
+
+    #menu {
         display: block;
     }
-    
-    #navbar p{
+
+    #navbar p {
         position: absolute;
         right: 50px;
         top: 50%;
@@ -1430,11 +1568,13 @@ header {
         font-size: 1.8rem;
         font-weight: 600;
     }
+
     #navbar #link {
         right: 0px;
         position: absolute;
         top: 100%;
     }
+
     #navbar ul {
         max-height: 0;
         overflow: hidden;
@@ -1445,58 +1585,75 @@ header {
         background-color: black;
         transition: 0.3s ease-out;
     }
+
     #navbar ul li {
         line-height: 30px;
-        
+
     }
+
     #navbar ul li a {
         color: white;
     }
+
     .About-me {
         padding: 3rem 0 3rem 3rem;
     }
+
     .hobbies {
         padding: 2rem 0 2rem 0;
         grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     }
+
     .img {
         height: 50%;
     }
+
     .contact-details {
         padding: 1rem 0 0 5rem;
     }
+
     .buttons {
         margin-top: 2rem;
     }
+
     .footer-wrapper {
         padding: 0 3rem;
     }
-    .contact-wrapper{
+
+    .contact-wrapper {
         flex-wrap: wrap;
     }
-    .contactme-wrapper{
+
+    .contactme-wrapper {
         flex-basis: 100%;
     }
-    .contact-details{
+
+    .contact-details {
         padding: 2rem 0 0 2rem;
         flex-basis: 90%;
     }
+
     .box {
         margin-bottom: 10rem;
     }
+
     .skill-circle {
         grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
     }
+
     .circle-box {
         height: 28rem;
     }
+
     .service-box {
         padding: 2rem 2rem;
         box-sizing: content-box;
     }
+
     .service-container {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
+
     .contact-me form {
         grid-template-areas:
             'one one one one'
@@ -1505,9 +1662,11 @@ header {
             'four four four four'
             'five five . .';
     }
+
     .Myskill p:last-child {
         text-align: center;
     }
+
     .service-box {
         height: 17rem;
     }

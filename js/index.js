@@ -13,6 +13,7 @@ window.onload = () => {
     const mediaQuery = window.matchMedia('(max-width:900px)');
     let serviceBox=document.querySelectorAll('.service-box');
     let serviceCircle=document.querySelectorAll('.service-circle');
+    let projectBox=document.querySelectorAll('.project-box')
 
 
     const width = $(window).width();
@@ -59,9 +60,13 @@ window.onload = () => {
 
 
     window.addEventListener('scroll', () => {
+        // if(window.pageYOffset == 0){
+        //     location.reload();
+        // }
         if (window.pageYOffset > navbar.offsetHeight) {
-            navbar.style.background = "white";
+            
             if (mediaQuery.matches) {
+                navbar.style.background = "white";
                 navbar.style.color = "black";
                 header.style.color = "black";
                 menulink.style.backgroundColor = "white";
@@ -69,10 +74,13 @@ window.onload = () => {
                     item.style.color = "black";
                 });
             }
+            else{
+                navbar.style.background = "white";
+            }
 
         }
         else {
-            navbar.style.background = "none";
+           
             if (mediaQuery.matches) {
                 navbar.style.background = "black";
                 navbar.style.color = "white";
@@ -81,6 +89,9 @@ window.onload = () => {
                 links.forEach((item) => {
                     item.style.color = "white";
                 });
+            }
+            else{
+                 navbar.style.background = "transparent";
             }
         }
         let current = "Home";
@@ -108,6 +119,9 @@ window.onload = () => {
                 box.style.color="white";
                 if(a==b){
                     circle.style.background="white";
+                    circle.style.left="50%";
+                    circle.style.top="0";
+                    circle.style.transform="translate(-50%,-50%)";
                 }
                 
             })
@@ -115,8 +129,13 @@ window.onload = () => {
                 box.style.background="white";
                 box.style.color="black";
                 circle.style.background="#B1B493";
+                if(a==b){
+                    circle.style.left="20%"
+                }
+                
             })
         });
-    })
+    });
+    AOS.init();
     
 }  

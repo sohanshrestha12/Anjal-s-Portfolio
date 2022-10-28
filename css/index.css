@@ -1517,7 +1517,7 @@ header {
 
     .container::after {
         width: 100%;
-        background: url(../img/phone_portfolio.png) 50% 100%/cover no-repeat;
+        background: url(../img/phone_portfolio.png) center right/cover no-repeat;
         opacity: 0.9;
     }
 

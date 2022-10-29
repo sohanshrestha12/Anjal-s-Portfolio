@@ -37,6 +37,11 @@ header {
 #menu {
     display: none;
 }
+#link {
+    position: relative;
+    flex: 1;
+    z-index: 999;
+}
 
 #navbar h1 a {
     text-decoration: none;
@@ -85,11 +90,7 @@ header {
     transition: 0.3s ease-in-out;
 }
 
-#link {
-    position: relative;
-    flex: 1;
-    z-index: 999;
-}
+
 
 .active {
     position: relative;
@@ -1070,6 +1071,26 @@ header {
         color: white;
         padding: 2.4rem 7.7rem;
     }
+    .home-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-wrapper p{
+        font-size: 2.5rem;
+    }
+    .home-wrapper h1{
+        font-size: 4rem;
+        color: white;
+    }
+    .home-wrapper a{
+        font-size: 2.5rem;
+    }
+  
+    .buttons .btn:last-child {
+        background-color: transparent;
+    }
 
     .links {
         line-height: 3.7rem;
@@ -1088,12 +1109,13 @@ header {
 
     .container::after {
         width: 100%;
-        background: url(../img/phone_portfolio.png) 0px 100%/cover no-repeat;
+        background: url(../img/phone_portfolio.png) 100% 100%/cover no-repeat;
     }
 
     .project-body {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
 

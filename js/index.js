@@ -30,7 +30,6 @@ window.onload = () => {
         //     location.reload();
         // }
         if (window.pageYOffset > navbar.offsetHeight) {
-            
             if (mediaQuery.matches) {
                 navbar.style.background = "white";
                 navbar.style.color = "black";
@@ -43,10 +42,8 @@ window.onload = () => {
             else{
                 navbar.style.backgroundColor = "white";
             }
-
         }
-        else {
-           
+        else {  
             if (mediaQuery.matches) {
                 navbar.style.background = "black";
                 navbar.style.color = "white";

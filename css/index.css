@@ -957,9 +957,8 @@ header {
     html {
         font-size: 8.6px;
     }
-
     .container::after {
-        background: url(../img/portfolio3.png) 0px 40%/cover no-repeat;
+        background: url(../img/portfolio3.png) 30% 100%/cover no-repeat;
     }
 
 

@@ -15,7 +15,7 @@ window.onload = () => {
     let projectBox=document.querySelectorAll('.project-box')
     const mediaQuery = window.matchMedia('(max-width:900px)');
 
-
+   
     const width = $(window).width();
     $(window).resize(function () {
         if (width > 899 && $(window).width() <= 905) {
@@ -131,4 +131,5 @@ window.onload = () => {
         });
     });
  
+   
 }  

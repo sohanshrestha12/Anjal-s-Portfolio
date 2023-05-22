@@ -136,6 +136,4 @@ window.onload = () => {
             })
         });
     });
-    AOS.init();
-    
 }  

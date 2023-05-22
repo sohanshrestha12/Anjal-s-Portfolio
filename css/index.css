@@ -37,10 +37,16 @@ header {
 #menu {
     display: none;
 }
+#link {
+    position: relative;
+    flex: 1;
+    z-index: 999;
+}
 
 #navbar h1 a {
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 
 #navbar ul {
@@ -85,11 +91,7 @@ header {
     transition: 0.3s ease-in-out;
 }
 
-#link {
-    position: relative;
-    flex: 1;
-    z-index: 999;
-}
+
 
 .active {
     position: relative;
@@ -396,7 +398,8 @@ header {
     border-radius: 0.8rem;
     overflow: hidden;
 }
-.img-content{
+
+.img-content {
     position: absolute;
     top: 0;
     display: flex;
@@ -408,51 +411,62 @@ header {
     width: 100%;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0.3s ease-out,opacity 0.3s ease-out;
-  
+    transition: visibility 0.3s ease-out, opacity 0.3s ease-out;
+
 }
-.desc{
-    color:var(--main-color);
+
+.desc {
+    color: var(--main-color);
     margin-top: 0.7rem;
     font-weight: 600;
 }
-.img-content::before{
+
+.img-content::before {
     content: "";
     z-index: 9;
     position: absolute;
+    top: 0;
+    left: 0;
     background-color: black;
     opacity: .6;
     height: 100%;
     width: 100%;
 }
-.img-content a{
-    z-index: 99;  
+
+.img-content a {
+    z-index: 99;
     color: white;
     text-decoration: none;
 }
+
 .img-content p {
     text-align: center;
     font-size: 1.8rem;
     word-break: break-word;
     letter-spacing: 0.1rem;
 }
+
 .img-content p:nth-of-type(1) {
     font-weight: 500;
 }
-.img-head{
+
+.img-head {
     font-weight: 700;
     font-size: 2.7rem;
     letter-spacing: 0.3rem;
 }
-.project-box:hover .img-content{
+
+.project-box:hover .img-content {
     visibility: visible;
     opacity: 1;
     cursor: pointer;
 }
+
 .project-box img {
     height: 100%;
     width: 100%;
 }
+
 .four img {
     width: 200% !important;
 }
@@ -944,9 +958,8 @@ header {
     html {
         font-size: 8.6px;
     }
-
     .container::after {
-        background: url(../img/portfolio3.png) 0px 40%/cover no-repeat;
+        background: url(../img/portfolio3.png) 30% 100%/cover no-repeat;
     }
 
 
@@ -1058,6 +1071,26 @@ header {
         color: white;
         padding: 2.4rem 7.7rem;
     }
+    .home-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-wrapper p{
+        font-size: 2.5rem;
+    }
+    .home-wrapper h1{
+        font-size: 4rem;
+        color: white;
+    }
+    .home-wrapper a{
+        font-size: 2.5rem;
+    }
+  
+    .buttons .btn:last-child {
+        background-color: transparent;
+    }
 
     .links {
         line-height: 3.7rem;
@@ -1076,12 +1109,13 @@ header {
 
     .container::after {
         width: 100%;
-        background: url(../img/phone_portfolio.png) 0px 100%/cover no-repeat;
+        background: url(../img/phone_portfolio.png) 100% 100%/cover no-repeat;
     }
 
     .project-body {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
 
@@ -1359,8 +1393,31 @@ header {
 
     .container::after {
         width: 100%;
-        background: url(../img/phone_portfolio.png) 50% 100%/cover no-repeat;
-        opacity: 0.9;
+        background: url(../img/phone_portfolio.png) 100% 100%/cover no-repeat;
+    }
+
+    .container p {
+        font-size: 2rem;
+    }
+
+    .container a {
+        font-size: 1.8rem;
+    }
+
+    .buttons .btn:last-child {
+        background-color: transparent;
+    }
+
+    .container h1 {
+        color: white;
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .home-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .project-body {
@@ -1372,13 +1429,6 @@ header {
 
     .project-box {
         width: 23rem;
-    }
-
-    .project-body div:nth-of-type(1),
-    .project-body div:nth-of-type(2),
-    .project-body div:nth-of-type(3),
-    .project-body div:nth-of-type(4) {
-        margin-left: 2rem;
     }
 
     .project-body div:nth-of-type(5),
@@ -1448,7 +1498,7 @@ header {
     }
 
     .img {
-        height: 100%;
+        height: 95%;
     }
 
     .contact-details {
@@ -1517,8 +1567,31 @@ header {
 
     .container::after {
         width: 100%;
-        background: url(../img/phone_portfolio.png) center right/cover no-repeat;
-        opacity: 0.9;
+        background: url(../img/phone_portfolio1.png) 100% 100%/cover no-repeat;
+    }
+
+    .container p {
+        font-size: 2rem;
+    }
+
+    .container a {
+        font-size: 1.8rem;
+    }
+
+    .buttons .btn:last-child {
+        background-color: transparent;
+    }
+
+    .container h1 {
+        color: white;
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    .home-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .project-body {
@@ -1532,12 +1605,6 @@ header {
         width: 23rem;
     }
 
-    .project-body div:nth-of-type(1),
-    .project-body div:nth-of-type(2),
-    .project-body div:nth-of-type(3),
-    .project-body div:nth-of-type(4) {
-        margin-left: 2rem;
-    }
 
     .project-body div:nth-of-type(5),
     .project-body div:nth-of-type(6),
@@ -1647,6 +1714,7 @@ header {
 
     .service-box {
         padding: 2rem 2rem;
+        height: fit-content;
         box-sizing: content-box;
     }
 
@@ -1665,9 +1733,5 @@ header {
 
     .Myskill p:last-child {
         text-align: center;
-    }
-
-    .service-box {
-        height: 17rem;
     }
 }
